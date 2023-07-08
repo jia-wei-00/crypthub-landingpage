@@ -54,7 +54,7 @@ const Section: React.FC<SectionT> = ({ title, subtitle, link, type }) => {
           </Button>
         </motion.div>
       </Container>
-      <ScrollText />
+      <ScrollText main="Crypthub" sub="Best Trader" />
 
       <CrypthubTraderDialog modal={modal} dispatch={dispatch} />
       <P2PTraderDialog modal={modal} dispatch={dispatch} />

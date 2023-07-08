@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
           <Button variant="contained">Trade Now</Button>
         </motion.div>
       </Container>
-      <ScrollText />
+      <ScrollText main="crypthub" sub="best trader" />
     </div>
   );
 };

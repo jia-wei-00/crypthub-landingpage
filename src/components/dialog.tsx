@@ -7,7 +7,6 @@ import {
 import { ModalPropsT } from "../type";
 import { MODALACTIONS } from "../constant";
 import CrypthubImage from "../assets/crypthub.png";
-import { Carousel } from "react-3dm-carousel";
 
 const data = [
   { id: "1", title: "1", description: "1", image: CrypthubImage },
@@ -25,14 +24,14 @@ export const CrypthubTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       onClose={() => dispatch({ type: MODALACTIONS.CRYPTHUB_MODAL })}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
-      maxWidth="xl"
+      maxWidth="md"
     >
       <DialogTitle id="alert-dialog-title">
         {"Use Google's location service?"}
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          <Carousel cardsData={data} />
+          {/* <Carousel cardsData={data} /> */}
         </DialogContentText>
       </DialogContent>
     </Dialog>

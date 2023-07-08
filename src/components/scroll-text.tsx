@@ -86,11 +86,13 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   );
 }
 
-export default function App() {
+const ScrollText: React.FC<{ main: string; sub: string }> = ({ main, sub }) => {
   return (
     <section className="scroller-section">
-      <ParallaxText baseVelocity={-5}>Crypthub</ParallaxText>
-      <ParallaxText baseVelocity={5}>Best Trader</ParallaxText>
+      <ParallaxText baseVelocity={-5}>{main}</ParallaxText>
+      <ParallaxText baseVelocity={5}>{sub}</ParallaxText>
     </section>
   );
-}
+};
+
+export default ScrollText;
