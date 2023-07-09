@@ -1,7 +1,5 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Crypthub from "../assets/crypthub.png";
 
 // Import Swiper styles
 import "swiper/css";
