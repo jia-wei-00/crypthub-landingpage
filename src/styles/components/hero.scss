@@ -35,6 +35,12 @@
 
     & > .title {
       font-size: $text-medium;
+      text-align: center;
+      width: 100%;
+
+      .MuiAccordion-region {
+        text-align: left;
+      }
     }
 
     & > .trade-btn {
@@ -43,4 +49,8 @@
       column-gap: 10px;
     }
   }
+}
+
+.MuiDialogContent-root {
+  overflow-x: hidden;
 }

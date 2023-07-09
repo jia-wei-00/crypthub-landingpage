@@ -18,47 +18,61 @@ const reducer = (state: ModalStateT, action: ActionT) => {
   }
 };
 
-const Section: React.FC<SectionT> = ({ title, subtitle, link, type }) => {
+const Section: React.FC<SectionT> = ({
+  title,
+  subtitle,
+  link_btn,
+  type,
+  scrol_text,
+}) => {
   const [modal, dispatch] = React.useReducer(reducer, initialModals);
 
   return (
-    <div className="section-container">
-      <Container maxWidth="lg">
-        <motion.div
-          initial={{ scaleY: 0, opacity: 0 }}
-          whileInView={{ scaleY: 1, opacity: 1 }}
-          transition={{ ease: "linear", delay: 0.5, duration: 0.3 }}
-          className="logo"
-        >
-          {title}
-        </motion.div>
-        <motion.div
-          initial={{ scaleY: 0, opacity: 0 }}
-          whileInView={{ scaleY: 1, opacity: 1 }}
-          transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
-          className="title"
-        >
-          {subtitle}
-        </motion.div>
-        <motion.div
-          initial={{ scaleY: 0, opacity: 0 }}
-          whileInView={{ scaleY: 1, opacity: 1 }}
-          transition={{ ease: "linear", delay: 1.8, duration: 0.3 }}
-          className="trade-btn"
-        >
-          <Button variant="contained" href={link} target="_blank">
-            Trade Now
-          </Button>
-          <Button variant="outlined" onClick={() => dispatch({ type: type })}>
-            Details
-          </Button>
-        </motion.div>
-      </Container>
-      <ScrollText main="Crypthub" sub="Best Trader" />
-
+    <>
+      <div className="section-container">
+        <Container maxWidth="lg">
+          <motion.div
+            initial={{ scaleY: 0, opacity: 0 }}
+            whileInView={{ scaleY: 1, opacity: 1 }}
+            transition={{ ease: "linear", delay: 0.5, duration: 0.3 }}
+            className="logo"
+          >
+            {title}
+          </motion.div>
+          <motion.div
+            initial={{ scaleY: 0, opacity: 0 }}
+            whileInView={{ scaleY: 1, opacity: 1 }}
+            transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
+            className="title"
+          >
+            {subtitle}
+          </motion.div>
+          <motion.div
+            initial={{ scaleY: 0, opacity: 0 }}
+            whileInView={{ scaleY: 1, opacity: 1 }}
+            transition={{ ease: "linear", delay: 1.8, duration: 0.3 }}
+            className="trade-btn"
+          >
+            {link_btn && (
+              <Button variant="contained" href={link_btn.link} target="_blank">
+                {link_btn.title}
+              </Button>
+            )}
+            {type && (
+              <Button
+                variant="outlined"
+                onClick={() => dispatch({ type: type })}
+              >
+                Details
+              </Button>
+            )}
+          </motion.div>
+        </Container>
+        <ScrollText main={scrol_text.main} sub={scrol_text.sub} />
+      </div>
       <CrypthubTraderDialog modal={modal} dispatch={dispatch} />
       <P2PTraderDialog modal={modal} dispatch={dispatch} />
-    </div>
+    </>
   );
 };
 

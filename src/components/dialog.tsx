@@ -3,19 +3,12 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  Zoom,
 } from "@mui/material";
 import { ModalPropsT } from "../type";
-import { MODALACTIONS } from "../constant";
-import CrypthubImage from "../assets/crypthub.png";
+import { MODALACTIONS, crypthub_data, p2p_data } from "../constant";
 
-const data = [
-  { id: "1", title: "1", description: "1", image: CrypthubImage },
-  { id: "2", title: "1", description: "1", image: CrypthubImage },
-  { id: "3", title: "1", description: "1", image: CrypthubImage },
-  { id: "4", title: "1", description: "1", image: CrypthubImage },
-  { id: "5", title: "1", description: "1", image: CrypthubImage },
-  { id: "6", title: "1", description: "1", image: CrypthubImage },
-];
+import Swiper from "./swiper";
 
 export const CrypthubTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
   return (
@@ -24,14 +17,16 @@ export const CrypthubTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       onClose={() => dispatch({ type: MODALACTIONS.CRYPTHUB_MODAL })}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
-      maxWidth="md"
+      fullWidth
+      TransitionComponent={Zoom}
     >
-      <DialogTitle id="alert-dialog-title">
-        {"Use Google's location service?"}
-      </DialogTitle>
+      <DialogTitle id="alert-dialog-title">CRYPTHUB TRADER</DialogTitle>
       <DialogContent>
-        <DialogContentText id="alert-dialog-description">
-          {/* <Carousel cardsData={data} /> */}
+        <DialogContentText
+          id="alert-dialog-description"
+          sx={{ overflow: "hidden" }}
+        >
+          <Swiper data={crypthub_data} />
         </DialogContentText>
       </DialogContent>
     </Dialog>
@@ -45,12 +40,14 @@ export const P2PTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       onClose={() => dispatch({ type: MODALACTIONS.P2P_MODAL })}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
+      fullWidth
+      TransitionComponent={Zoom}
     >
-      <DialogTitle id="alert-dialog-title">
-        {"Use Google's location service?"}
-      </DialogTitle>
+      <DialogTitle id="alert-dialog-title">P2P TRADER</DialogTitle>
       <DialogContent>
-        <DialogContentText id="alert-dialog-description">p2p</DialogContentText>
+        <DialogContentText id="alert-dialog-description">
+          <Swiper data={p2p_data} />
+        </DialogContentText>
       </DialogContent>
     </Dialog>
   );

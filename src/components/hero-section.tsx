@@ -4,8 +4,13 @@ import "../styles/components/hero.scss";
 import Logo from "../assets/logo.svg";
 import { motion } from "framer-motion";
 import ScrollText from "./scroll-text";
+import { SectionT } from "../type";
 
-const HeroSection: React.FC = () => {
+const HeroSection: React.FC<SectionT> = ({
+  subtitle,
+  link_btn,
+  scrol_text,
+}) => {
   return (
     <div className="section-container">
       <Container maxWidth="lg">
@@ -36,7 +41,7 @@ const HeroSection: React.FC = () => {
           transition={{ ease: "linear", delay: 1.3, duration: 0.5 }}
           className="title"
         >
-          Your Best Trader Partner
+          {subtitle}
         </motion.div>
         <motion.div
           initial={{ scaleY: 0, opacity: 0 }}
@@ -44,10 +49,12 @@ const HeroSection: React.FC = () => {
           transition={{ ease: "linear", delay: 2, duration: 0.3 }}
           className="trade-btn"
         >
-          <Button variant="contained">Trade Now</Button>
+          <Button variant="contained" href={link_btn!.link} target="_blank">
+            {link_btn!.title}
+          </Button>
         </motion.div>
       </Container>
-      <ScrollText main="crypthub" sub="best trader" />
+      <ScrollText main={scrol_text.main} sub={scrol_text.sub} />
     </div>
   );
 };

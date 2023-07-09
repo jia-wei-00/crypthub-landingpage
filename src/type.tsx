@@ -1,10 +1,17 @@
 import { Dispatch } from "react";
 
 export type SectionT = {
-  title: string;
+  title?: string;
   subtitle: string;
-  link: string;
-  type: string;
+  link_btn?: {
+    title: string;
+    link: string;
+  };
+  type?: string;
+  scrol_text: {
+    main: string;
+    sub: string;
+  };
 };
 
 export type ModalStateT = {
@@ -19,4 +26,13 @@ export type ActionT = {
 export type ModalPropsT = {
   modal: ModalStateT;
   dispatch: Dispatch<ActionT>;
+};
+
+export type ImageData = {
+  image: string;
+  details: string;
+};
+
+export type ImageDataSetT = {
+  data: ImageData[];
 };
