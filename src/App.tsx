@@ -18,6 +18,7 @@ function App() {
       <div ref={scroll_ref}>
         <HeroSection
           subtitle="Your Best Trader Partner"
+          desc="Testing"
           link_btn={{
             title: "Sign Up",
             link: "https://crypthub-app.vercel.app/?login=true",
@@ -27,6 +28,7 @@ function App() {
         <Section
           title="Crypthub Trader"
           subtitle="Your Best Trader Partner"
+          // desc="testing"
           link_btn={{
             title: "Trade Now",
             link: "https://crypthub-app.vercel.app/",
@@ -37,6 +39,7 @@ function App() {
         <Section
           title="P2P Trader"
           subtitle="Your Best Trader Partner"
+          // desc="testing"
           link_btn={{
             title: "Trade Now",
             link: "https://crypthub-app.vercel.app/p2pTrader",

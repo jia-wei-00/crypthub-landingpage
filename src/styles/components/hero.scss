@@ -20,6 +20,10 @@
     align-items: center;
     row-gap: 30px;
 
+    & > .desc {
+      font-size: $text-small;
+    }
+
     & > .logo {
       & > img {
         width: calc(5vw + 40px);

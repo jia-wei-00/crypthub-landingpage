@@ -9,6 +9,7 @@ import { SectionT } from "../type";
 const HeroSection: React.FC<SectionT> = ({
   subtitle,
   link_btn,
+  desc,
   scrol_text,
 }) => {
   return (
@@ -42,6 +43,14 @@ const HeroSection: React.FC<SectionT> = ({
           className="title"
         >
           {subtitle}
+        </motion.div>
+        <motion.div
+          initial={{ scaleY: 0, opacity: 0 }}
+          whileInView={{ scaleY: 1, opacity: 1 }}
+          transition={{ ease: "linear", delay: 1.3, duration: 0.5 }}
+          className="desc"
+        >
+          {desc}
         </motion.div>
         <motion.div
           initial={{ scaleY: 0, opacity: 0 }}
