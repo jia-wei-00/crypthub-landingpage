@@ -17,9 +17,9 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <div ref={scroll_ref}>
         <HeroSection
-          subtitle="Your Best Trader Partner"
+          subtitle="Your Financial Landscaper"
           link_btn={{
-            title: "Sign Up",
+            title: "Start Trading",
             link: "https://crypthub-app.vercel.app/?login=true",
           }}
           scrol_text={{ main: "crypthub", sub: "best trader" }}
