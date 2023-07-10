@@ -21,6 +21,7 @@ const reducer = (state: ModalStateT, action: ActionT) => {
 const Section: React.FC<SectionT> = ({
   title,
   subtitle,
+  desc,
   link_btn,
   type,
   scrol_text,
@@ -46,6 +47,14 @@ const Section: React.FC<SectionT> = ({
             className="title"
           >
             {subtitle}
+          </motion.div>
+          <motion.div
+            initial={{ scaleY: 0, opacity: 0 }}
+            whileInView={{ scaleY: 1, opacity: 1 }}
+            transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
+            className="desc"
+          >
+            {desc}
           </motion.div>
           <motion.div
             initial={{ scaleY: 0, opacity: 0 }}

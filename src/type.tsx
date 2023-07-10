@@ -3,6 +3,7 @@ import { Dispatch } from "react";
 export type SectionT = {
   title?: string;
   subtitle: string;
+  desc?: string;
   link_btn?: {
     title: string;
     link: string;
