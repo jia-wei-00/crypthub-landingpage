@@ -20,7 +20,7 @@ export const CrypthubTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       fullWidth
       TransitionComponent={Zoom}
     >
-      <DialogTitle id="alert-dialog-title">CRYPTHUB TRADER</DialogTitle>
+      <DialogTitle id="alert-dialog-title">Crypthub Trader</DialogTitle>
       <DialogContent>
         <DialogContentText
           id="alert-dialog-description"
