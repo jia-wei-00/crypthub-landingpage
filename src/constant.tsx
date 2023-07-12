@@ -3,6 +3,10 @@ import hp1 from "./assets/hp1.png";
 import hp2 from "./assets/hp2.png";
 import candlestats from "./assets/candlestats.png";
 import scrollable from "./assets/scrollable.png";
+import desiredprice from "./assets/desiredprice.png";
+import ongoing from "./assets/ongoing.png";
+import marketplace from "./assets/marketplace.png";
+import filter from "./assets/filter.png";
 
 export const initialModals = {
   crypthub_trader_modal: false,
@@ -23,11 +27,10 @@ export const crypthub_data = [
 ];
 
 export const p2p_data = [
-  { image: CrypthubImage, details: "Trade and sell your crypto with various users in the Marketplace" },
-  { image: CrypthubImage, details: "Explore the Marketplace and filter your favourite crypto" },
-  { image: CrypthubImage, details: "View your ongoing contracts" },
-  { image: CrypthubImage, details: "Sell your crypto with the prices you desire" },
-  { image: CrypthubImage, details: "Crypthub Trader" },
+  { image: marketplace, details: "Trade and sell your crypto with various users in the Marketplace" },
+  { image: filter, details: "Explore the Marketplace and filter your favourite crypto" },
+  { image: desiredprice, details: "Sell your contract with the prices you desire" },
+  { image: ongoing, details: "View your ongoing contracts" },
 ];
 
 export const FAQ_data = [
