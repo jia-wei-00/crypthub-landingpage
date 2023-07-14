@@ -62,7 +62,7 @@ function App() {
           desc="Feel free to contact us for more inquiries"
           link_btn={{
             title: "Contact Us",
-            link: "https://crypthub-app.vercel.app/p2pTrader",
+            link: "mailto:crypthubofficial@gmail.com",
           }}
           scrol_text={{ main: "crypthub", sub: "contact us" }}
         />

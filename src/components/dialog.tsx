@@ -18,6 +18,7 @@ export const CrypthubTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       fullWidth
+      maxWidth="lg"
       TransitionComponent={Zoom}
     >
       <DialogTitle id="alert-dialog-title">Crypthub Trader</DialogTitle>
@@ -41,6 +42,7 @@ export const P2PTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       fullWidth
+      maxWidth="lg"
       TransitionComponent={Zoom}
     >
       <DialogTitle id="alert-dialog-title">P2P TRADER</DialogTitle>
