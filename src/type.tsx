@@ -1,8 +1,8 @@
-import { Dispatch } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 export type SectionT = {
   title?: string;
-  subtitle: string;
+  subtitle?: string;
   desc?: string;
   link_btn?: {
     title: string;
@@ -36,4 +36,9 @@ export type ImageData = {
 
 export type ImageDataSetT = {
   data: ImageData[];
+};
+
+export type BooleanStateT = {
+  state: boolean;
+  setState: Dispatch<SetStateAction<boolean>>;
 };

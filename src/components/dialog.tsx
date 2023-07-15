@@ -5,10 +5,11 @@ import {
   DialogTitle,
   Zoom,
 } from "@mui/material";
-import { ModalPropsT } from "../type";
+import { BooleanStateT, ModalPropsT } from "../type";
 import { MODALACTIONS, crypthub_data, p2p_data } from "../constant";
 
 import Swiper from "./swiper";
+import FAQAccordions from "./faq";
 
 export const CrypthubTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
   return (
@@ -49,6 +50,27 @@ export const P2PTraderDialog = ({ modal, dispatch }: ModalPropsT) => {
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <Swiper data={p2p_data} />
+        </DialogContentText>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+export const FAQDialog = ({ state, setState }: BooleanStateT) => {
+  return (
+    <Dialog
+      open={state}
+      onClose={() => setState(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+      fullWidth
+      maxWidth="lg"
+      TransitionComponent={Zoom}
+    >
+      <DialogTitle id="alert-dialog-title">FAQ</DialogTitle>
+      <DialogContent>
+        <DialogContentText id="alert-dialog-description">
+          <FAQAccordions />
         </DialogContentText>
       </DialogContent>
     </Dialog>

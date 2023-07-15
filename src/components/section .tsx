@@ -40,22 +40,26 @@ const Section: React.FC<SectionT> = ({
           >
             {title}
           </motion.div>
-          <motion.div
-            initial={{ scaleY: 0, opacity: 0 }}
-            whileInView={{ scaleY: 1, opacity: 1 }}
-            transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
-            className="title"
-          >
-            {subtitle}
-          </motion.div>
-          <motion.div
-            initial={{ scaleY: 0, opacity: 0 }}
-            whileInView={{ scaleY: 1, opacity: 1 }}
-            transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
-            className="desc"
-          >
-            {desc}
-          </motion.div>
+          {subtitle && (
+            <motion.div
+              initial={{ scaleY: 0, opacity: 0 }}
+              whileInView={{ scaleY: 1, opacity: 1 }}
+              transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
+              className="title"
+            >
+              {subtitle}
+            </motion.div>
+          )}
+          {desc && (
+            <motion.div
+              initial={{ scaleY: 0, opacity: 0 }}
+              whileInView={{ scaleY: 1, opacity: 1 }}
+              transition={{ ease: "linear", delay: 1.3, duration: 0.2 }}
+              className="desc"
+            >
+              {desc}
+            </motion.div>
+          )}
           <motion.div
             initial={{ scaleY: 0, opacity: 0 }}
             whileInView={{ scaleY: 1, opacity: 1 }}
