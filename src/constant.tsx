@@ -1,4 +1,4 @@
-import CrypthubImage from "./assets/crypthub.png";
+import deposit from "./assets/deposit.png";
 import hp1 from "./assets/hp1.png";
 import hp2 from "./assets/hp2.png";
 import candlestats from "./assets/candlestats.png";
@@ -27,7 +27,7 @@ export const crypthub_data = [
   },
   { image: scrollable, details: "Buy and sell effortlessly" },
   {
-    image: CrypthubImage,
+    image: deposit,
     details: "Deposit and withdraw your balance with a click of a button",
   },
 ];
@@ -70,7 +70,8 @@ export const FAQ_data = [
   {
     panel: "panel4",
     header: "Are there any trading fees or commissions?",
-    content: "Yes, we have commissions, but there are no trading fees.",
+    content:
+      "Yes, we have 5% commissions for every crypto that you sell, but there are no trading fees.",
   },
   {
     panel: "panel5",
@@ -95,5 +96,11 @@ export const FAQ_data = [
     header: "Do you provide real-time market data and charts?",
     content:
       "Yes, we provide real-time market data, including live price quotes and interactive charts, to help you make informed trading decisions. These tools are available within our trading platform.",
+  },
+  {
+    panel: "panel9",
+    header: "What other trading services do you provide?",
+    content:
+      "We offer P2P trading, where you can sell your crypto at your desired price and buy multiple crypto contracts.",
   },
 ];
